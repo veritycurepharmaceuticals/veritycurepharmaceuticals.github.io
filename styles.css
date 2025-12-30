@@ -654,4 +654,11 @@ body {
     .logo img {
         height: 40px;
     }
+
 }
+.no-link {
+  text-decoration: none;
+  cursor: pointer;
+}
+.rapidYellow{color: #ffca20}
+.clrWhite{color: #fff}
