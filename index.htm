@@ -147,9 +147,11 @@
                 <div class="contact-info">
                     <div class="info-card">
                         <h4>📍 Address</h4>
-                        <p>101-A, Flat No - C, Shalimar Garden Main<br>
-                        Sahibabad, Ghaziabad<br>
-                        Uttar Pradesh, India - 201005</p>
+                        <p>
+                            101-A, Flat No - C, Shalimar Garden Main<br>
+                            Sahibabad, Ghaziabad<br>
+                            Uttar Pradesh, India - 201005
+                        </p>
                     </div>
                     <div class="info-card">
                         <h4>📧 Email</h4>
@@ -164,7 +166,8 @@
                 <div class="contact-form">
                     <form id="contactForm"
                           action="https://formsubmit.co/vsl.pharmaceuticalpvtltd@gmail.com"
-                          method="POST">
+                          method="POST"
+                          target="hidden_iframe">
 
                         <input type="text" name="name" placeholder="Your Name" required>
                         <input type="email" name="email" placeholder="Your Email" required>
@@ -184,6 +187,9 @@
                 </div>
             </div>
         </div>
+
+        <!-- Hidden iframe to prevent redirect -->
+        <iframe name="hidden_iframe" style="display:none;"></iframe>
     </section>
 
     <!-- Footer -->
@@ -197,13 +203,13 @@
                 <div class="footer-text">
                     <p>&copy; 2025 VSL Pharmaceuticals Private Limited. All rights reserved.</p>
                     <p class="no-link clrWhite">
-                        Developed and Managed by 
+                        Developed and Managed by
                         <a href="https://www.fiveunclabs.in">
                             <span class="rapidYellow">FiveUnc Labs</span>
                         </a>
                     </p>
                 </div>
-                <small style="color:#b0b0b0">v1.2.0</small>
+                <small style="color:#b0b0b0;">v1.3.0</small>
             </div>
         </div>
     </footer>
@@ -243,11 +249,12 @@
         const thankYou = document.getElementById("thankYouMessage");
 
         form.addEventListener("submit", function () {
-            form.style.display = "none";
-            thankYou.style.display = "block";
+            setTimeout(() => {
+                form.style.display = "none";
+                thankYou.style.display = "block";
+            }, 300);
         });
     </script>
 
 </body>
 </html>
-
